@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-color: #eeeeee;
+    height: 100%;
+}
+
+#img-container{
+    margin-top: 50px;
+    min-height: 100%;
+}
+
+#container{
+    margin-top: 100px;
+    min-height: 100%;
+}
+
+#main{
+    overflow: visible;
+}
+
+#box{
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.box{
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 100px 10px;
+    background-color: #ffffff;
+}
+
+.footer{
+    position: relative;
+    padding: 10px 0px; 
+    background-color: #101010; 
+    color:#9d9d9d;
+    width: 100%;
+    margin-top: -50px;
+    clear: both;
+}
+
+#banner_image{   
+    text-align: center; 
+    background-position:center;
+    color: #f8f8f8; 
+    background: url("https://wallpaperaccess.com/full/825735.jpg") no-repeat center center; 
+    background-size: cover;
+}
+
+#banner_content{
+    position: relative;
+    padding-top: 6%; 
+    padding-bottom: 6%; 
+    margin-top: 24%; 
+    margin-bottom: 33%; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn-primary{
+    background-color: #00C69E;
+}
+
+.panel > .panel-heading{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#plan{ 
+    margin-right: 10%;
+    font-size: 50px;
+    float: right; 
+    text-decoration: none;
+    color: #00C69E;
+}
+
+.button{
+     background-color: white;
+     color: #00C69E;
+     border-color: #00C69E;
+}
+
+.button:hover{
+    background-color: #00C69E;
+    color: white;
+}
