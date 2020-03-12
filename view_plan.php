@@ -81,7 +81,7 @@
                                 $new_result = mysqli_query($con, $new_query) or die(mysqli_error($con));
                                 $row_second = mysqli_fetch_array($new_result);  
                             ?> 
-                            <div class="col-xs-8">
+                            <div class="col-xs-12 col-sm-8">
                                 <div class="panel panel-default" style="width:75%">
                                     <div class="panel-heading" style="background-color: #00C69E; color: white"> 
                                         <h4 style="text-align: center;"><?php echo $row_second['title'] ?><span class="glyphicon glyphicon-user" style="float: right;"><?php echo $row_second['number_of_people']; ?></span></h4>
@@ -134,7 +134,7 @@
                                             $date_query = "select date_format(date, '%D %b %Y'), image_path from new_expense_details where id = '$arr_rows[0]'";
                                             $date_submit = mysqli_query($con, $date_query);
                                             $row_seventh = mysqli_fetch_array($date_submit);?>
-                                            <div class="col-xs-4">
+                                            <div class="col-sm-6 col-xs-12 col-md-4">
                                                 <div class="panel panel-default">
                                                     <div class="panel-heading" style="background-color: #00C69E; color: white"> 
                                                         <h4 style="text-align: center;"><?php echo $arr_rows['title']; ?></h4>
@@ -174,12 +174,11 @@
                                     } ?>
                                 </div>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-sm-4 col-xs-12">
                                 <form action="expense_distribution.php" method="post">
                                     <input type="hidden" name="planDetailsId" value="<?php echo $plan_id; ?>">
                                     <input type="hidden" name="remainingAmount" value="<?php echo $amount; ?>">
-                                    <button type="Submit" class=" btn btn-primary btn-lg button" id="hoverOver" style="margin-top: 16%; margin-bottom: 26%;">
-                                        Expense Distribution</button>
+                                    <button type="Submit" class=" btn btn-primary btn-lg button" id="hoverOver" style="margin-top: 16%; margin-bottom: 26%;">Expense Distribution</button>
                                 </form> 
                                 <div class="row">            
                                     <div class="col-xs-12">

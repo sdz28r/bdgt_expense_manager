@@ -19,7 +19,7 @@
             include 'includes/header.php';
         ?>
         
-        <main>
+        <main style="margin-bottom: 200px">
             <?php
                 $email = $_SESSION['email'];
                 $query = "select * from plan_members where user_email = '$email'";
@@ -49,7 +49,7 @@
                                     $new_query = "select * from plan_details where id = '$row_first[3]'";
                                     $new_result = mysqli_query($con, $new_query) or die(mysqli_error($con));
                                     $row_second = mysqli_fetch_array($new_result); ?> 
-                                    <div class="col-md-3 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-0">
+                                    <div class="col-md-3 col-sm-8 col-xs-10">
                                         <div class="panel panel-default">
                                             <div class="panel-heading" style="background-color: #00C69E; color: white"> 
                                                 <h4 style="text-align: center;"><?php echo $row_second['title']; ?><span class="glyphicon glyphicon-user" style="float: right;"><span style=" vertical-align: top;"><?php echo "".$row_second['number_of_people']; ?></span></span></h4>
@@ -85,12 +85,18 @@
                             <?php } ?>
                         </div>
                     </div>
+                </main>
+            <div class="abovefooter">
                 <a href="create_new_plan.php"  id="plan" class="glyphicon glyphicon-plus-sign lg"></a>   
-            <?php } ?>
-        </main>
-        
-        <?php
-            include 'includes/footer.php';
-        ?>
+            </div>
+        <?php } ?>
+         
+        <footer>
+            <div class="footer">
+                <center>
+                    <p>Copyright © Control Budget. All Rights Reserved|Contact Us: +91-8190847372</p>
+                </center>
+            </div>
+        </footer>
     </body>
 </html>
