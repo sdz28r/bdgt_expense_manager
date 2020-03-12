@@ -3,23 +3,14 @@
     padding: 0;
 }
 
-html, body{
-    background-color: #eeeeee;
-    height: 100%;
-}
-
-#img-container{
-    margin-top: 50px;
+body{
     min-height: 100%;
+    background-color: #dddddd;
 }
 
-#container{
-    margin-top: 100px;
-    min-height: 100%;
-}
-
-#main{
-    overflow: visible;
+main{
+    margin-top: 90px;
+    margin-bottom: 100px;
 }
 
 #box{
@@ -33,24 +24,15 @@ html, body{
     text-align: center;
     border-radius: 10px;
     border: 1px solid white;
-    padding: 100px 10px;
+    padding: 100px;
     background-color: #ffffff;
-}
-
-.footer{
-    position: relative;
-    padding: 10px 0px; 
-    background-color: #101010; 
-    color:#9d9d9d;
-    width: 100%;
-    margin-top: -50px;
-    clear: both;
 }
 
 #banner_image{   
     text-align: center; 
     background-position:center;
-    color: #f8f8f8; 
+    color: #f8f8f8;
+    height: 100%;
     background: url("https://wallpaperaccess.com/full/825735.jpg") no-repeat center center; 
     background-size: cover;
 }
@@ -59,8 +41,8 @@ html, body{
     position: relative;
     padding-top: 6%; 
     padding-bottom: 6%; 
-    margin-top: 24%; 
-    margin-bottom: 33%; 
+    margin-top: 12%; 
+    margin-bottom: 45%;  
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -90,4 +72,13 @@ html, body{
 .button:hover{
     background-color: #00C69E;
     color: white;
+}
+
+.footer{
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #000000;
 }

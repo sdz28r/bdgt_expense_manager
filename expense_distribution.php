@@ -30,9 +30,8 @@
             include 'includes/header.php';
         ?>
         
-        <div id="container">
-        <div id="main">
-        <div class="container">     
+        <main>
+            <div class="container">     
                 <div class="row">
                     <div class="col-xs-6 col-xs-offset-3">
                         <div class="panel panel-default">
@@ -121,9 +120,7 @@
                     </div>
                 </div>  
             </div>
-        </div>
-        </div>
-        </div>
+        </main>
         
         <?php
             include 'includes/footer.php';

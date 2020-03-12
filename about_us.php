@@ -19,9 +19,8 @@
             include 'includes/header.php';
         ?>
         
-        <div id="container">
-        <div id="main">
-        <div class='container'>
+        <main style="margin-top: 130px;">
+            <div class='container'>
                 <div class='row'>
                     <div class='col-xs-6'>
                         <h2>Who are we?</h2>
@@ -44,8 +43,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
         
         <?php
             include 'includes/footer.php';

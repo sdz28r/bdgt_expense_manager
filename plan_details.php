@@ -2,7 +2,6 @@
     require 'includes/common.php';
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,13 +13,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    
     <body>
         <?php
             include 'includes/header.php';
         ?>
         
-        <div id="container">
-        <div id="main">
+        <main>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -55,8 +54,7 @@
                                     </div>
                                 </div>
                                 
-                                <?php 
-                                    
+                                <?php                                     
                                     for($i=0; $i<$_SESSION['number_of_people']; $i++){ ?>
                                         <div class="form-group">
                                             <strong>Person <?php echo($i+1); ?></strong>
@@ -71,8 +69,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
         
         <?php
             include 'includes/footer.php';

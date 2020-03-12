@@ -19,32 +19,25 @@
             include 'includes/header.php';
         ?>
         
-        
-        <div id="container">
-        <div id="main">
-        
-        <?php
-            $email = $_SESSION['email'];
-            $query = "select * from plan_members where user_email = '$email'";
-            $result = mysqli_query($con, $query);
-            $rows_selected = mysqli_num_rows($result);
-            if($rows_selected < 1) {
-        ?>
-        
-        
-                <div class='container'>
-                        <h2>You don't have any active plans</h2>
-                    
-                    <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 col-md-offset-4 col-md-4">
-                            <div class="box">
-                                <p><a href="create_new_plan.php" style="text-decoration: none;"><span class="glyphicon glyphicon-plus-sign" style="color: #00C69E;"></span>Create a New Plan</a></p>
+        <main>
+            <?php
+                $email = $_SESSION['email'];
+                $query = "select * from plan_members where user_email = '$email'";
+                $result = mysqli_query($con, $query);
+                $rows_selected = mysqli_num_rows($result);
+                if($rows_selected < 1) { ?>        
+                    <div class='container'>
+                            <h3>You don't have any active plans</h3>
+                        <div class="row">
+                            <div class="col-xs-10 col-xs-offset-1 col-md-offset-4 col-md-4">
+                                <div class="box">
+                                    <p><a href="create_new_plan.php" style="text-decoration: none;"><span class="glyphicon glyphicon-plus-sign" style="color: #00C69E;"></span>Create a New Plan</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        <?php } else{ ?>
-                    <div class='container'>
+            <?php } else{ ?>
+                        <div class='container'>
                             <div class="row">
                                 <div class="col-md-3 col-xs-12">
                                     <h2>Your Plans</h2>
@@ -55,8 +48,7 @@
                                     $row_first = mysqli_fetch_array($result);
                                     $new_query = "select * from plan_details where id = '$row_first[3]'";
                                     $new_result = mysqli_query($con, $new_query) or die(mysqli_error($con));
-                                    $row_second = mysqli_fetch_array($new_result);
-                                ?> 
+                                    $row_second = mysqli_fetch_array($new_result); ?> 
                                     <div class="col-md-3 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-0">
                                         <div class="panel panel-default">
                                             <div class="panel-heading" style="background-color: #00C69E; color: white"> 
@@ -90,17 +82,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                <?php } ?>
-                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
-                
                 <a href="create_new_plan.php"  id="plan" class="glyphicon glyphicon-plus-sign lg"></a>   
-            
-        
-        <?php } ?>
-          
-            </div>
-        </div>
+            <?php } ?>
+        </main>
         
         <?php
             include 'includes/footer.php';

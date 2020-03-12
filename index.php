@@ -17,13 +17,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    
     <body>
         <?php
             include 'includes/header.php';
         ?>
-        
-        <div id="img-container">
-        <div id="main">
+      
         <div id="banner_image">
             <div class="container">
                 <center>
@@ -33,8 +32,6 @@
                     </div>
                 </center>
             </div>
-        </div>
-        </div>
         </div>
         
         <?php

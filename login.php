@@ -2,7 +2,6 @@
     require 'includes/common.php';
 ?>
 
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,8 +18,7 @@
             include 'includes/header.php';
         ?>
 
-        <div id="container">
-        <div id="main">
+        <main>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-8 col-md-4 col-md-offset-4 col-xs-offset-2">
@@ -52,8 +50,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
         
         <?php
             include 'includes/footer.php';
