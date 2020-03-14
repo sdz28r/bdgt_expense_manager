@@ -31,7 +31,7 @@
                         <div class="row">
                             <div class="col-xs-10 col-xs-offset-1 col-md-offset-4 col-md-4">
                                 <div class="box">
-                                    <p><a href="create_new_plan.php" style="text-decoration: none;"><span class="glyphicon glyphicon-plus-sign" style="color: #00C69E;"></span>Create a New Plan</a></p>
+                                    <p><a href="create_new_plan.php" style="text-decoration: none;"><span class="glyphicon glyphicon-plus-sign" style="color: #00796b;"></span>Create a New Plan</a></p>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                                     $row_second = mysqli_fetch_array($new_result); ?> 
                                     <div class="col-md-3 col-sm-8 col-xs-10">
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" style="background-color: #00C69E; color: white"> 
+                                            <div class="panel-heading" style="background-color: #00796b; color: white"> 
                                                 <h4 style="text-align: center;"><?php echo $row_second['title']; ?><span class="glyphicon glyphicon-user" style="float: right;"><span style=" vertical-align: top;"><?php echo "".$row_second['number_of_people']; ?></span></span></h4>
                                             </div>
                                             <div class="panel-body">
@@ -76,7 +76,7 @@
                                                         echo $row_third[0]." - ".$row_forth[0]; ?></span>
                                                     </div>
                                                     <div class="form-group">
-                                                        <strong><button type="Submit" class="btn btn-primary form-control button" id="hoverOver">View Plan</button></strong>
+                                                        <strong><button type="Submit" class="btn btn-primary form-control button">View Plan</button></strong>
                                                     </div>
                                                 </form>
                                             </div>

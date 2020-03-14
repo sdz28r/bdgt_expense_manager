@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-xs-8 col-md-6 col-md-offset-3 col-xs-offset-2">
                         <div class="panel panel-primary">
-                            <div class="panel-heading" style="background-color: #00C69E;"> 
+                            <div class="panel-heading" style="background-color: #00796b;"> 
                                 <center>
                                     <h3>Create New Plan</h3>
                                 </center>
@@ -57,7 +57,7 @@
                                         <input type="tel" min="1" required class="form-control" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" placeholder="No. of people" name="numberOfPeople">
                                     </div>
                                     <div class="form-group">
-                                        <strong><button type="Submit" class="btn btn-primary form-control">Next</button></strong>
+                                        <strong><button type="Submit" class="btn btn-primary buttonindex form-control">Next</button></strong>
                                     </div>
                                 </form>
                             </div>

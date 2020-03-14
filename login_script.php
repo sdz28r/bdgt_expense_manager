@@ -5,10 +5,11 @@
     $login_password = mysqli_real_escape_string($con, $_POST['loginPassword']);
     $login_password = md5($login_password);
     
-    $signup_query = "select * from users where email = '$login_email'";
+    $login_query = "select * from users where email = '$login_email'";
     echo "User login in between";
-    $signup_submit = mysqli_query($con, $signup_query) or die(mysqli_errno($con));
-    $row = mysqli_fetch_array($signup_submit);
+    $login_submit = mysqli_query($con, $login_query) or die(mysqli_errno($con));
+    $row = mysqli_fetch_array($login_submit);
+    $num = mysqli_num_rows($login_submit);
     
     if($login_password == $row['password']){
         $_SESSION['name'] = $row['name'];
@@ -22,7 +23,11 @@
         header('location: home.php');
         exit ;
     } else{
-        header('location: login.php');
+        if($num < 1){
+            echo "<script>alert('User with this email address does not exist'); window.location = 'login.php'; </script>";
+        } else{
+            echo "<script>alert('Invalid email address or password'); window.location = 'login.php'; </script>";
+        }
         exit ;
     }
 ?>

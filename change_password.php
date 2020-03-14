@@ -43,7 +43,7 @@
                                         <input type="password" required class="form-control" placeholder="Re-type New Password" name="confirmNewPassword">
                                     </div>
                                     <div class="form-group">
-                                        <strong><button type="Submit" class="btn btn-primary form-control"><b>Change</b></button></strong>
+                                        <strong><button type="Submit" class="btn btn-primary buttonindex form-control"><b>Change</b></button></strong>
                                     </div>
                                 </form>
                             </div>

@@ -5,7 +5,7 @@
 
 body{
     min-height: 100%;
-    background-color: #dddddd;
+    background-color: #eef5ee;
 }
 
 main{
@@ -29,6 +29,10 @@ main{
     background-color: #ffffff;
 }
 
+.btn-primary{
+    background-color: #00796b;
+}
+
 #banner_image{   
     text-align: center; 
     background-position:center;
@@ -47,10 +51,6 @@ main{
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.btn-primary{
-    background-color: #00C69E;
-}
-
 .panel > .panel-heading{
     padding-bottom: 5px;
     padding-top: 5px;
@@ -62,17 +62,54 @@ main{
     font-size: 50px;
     float: right; 
     text-decoration: none;
-    color: #00C69E;
+    color: #00796b;
 }
 
 .button{
-     background-color: white;
-     color: #00C69E;
-     border-color: #00C69E;
+    background-color: white;
+    color: #00796b;
+    border-color: #00796b;
 }
 
 .button:hover{
-    background-color: #00C69E;
+    background-color: #00796b;
+    color: white;
+    border-color: #00796b;
+}
+
+.button:focus{
+    background-color: #00796b;
+    color: white;
+    border-color: #00796b;
+}
+
+.button:active{
+    background-color: #00796b;
+    color: white;
+    border-color: #00796b;
+}
+
+.buttonindex{
+    border-color: #00796b;
+    background-color: #00796b;
+    color: white;
+}
+
+.buttonindex:hover{
+    border-color: #00796b;
+    background-color: #00796b;
+    color: white;
+}
+
+.buttonindex:focus{
+    border-color: #00796b;
+    background-color: #00796b;
+    color: white;
+}
+
+.buttonindex:active{
+    border-color: #00796b;
+    background-color: #00796b;
     color: white;
 }
 

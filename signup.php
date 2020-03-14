@@ -60,7 +60,7 @@
                                         <input type="tel" required class="form-control lg" placeholder="Enter Valid Phone Number (Ex: 8448444853)" name="phoneNumber">
                                     </div>
                                     <div class="form-group">
-                                        <strong><button type="Submit" class="btn btn-primary form-control">Sign Up</button></strong>
+                                        <strong><button type="Submit" class="btn btn-primary buttonindex form-control">Sign Up</button></strong>
                                     </div>
                                 </form>
                             </div>

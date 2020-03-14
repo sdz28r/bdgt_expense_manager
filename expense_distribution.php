@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-xs-6 col-xs-offset-3">
                         <div class="panel panel-default">
-                            <div class="panel-heading" style="background-color: #00C69E; color: white"> 
+                            <div class="panel-heading" style="background-color: #00796b; color: white"> 
                                 <h5 style="text-align: center;"><?php echo $plan_details_array['title'];?><span class="glyphicon glyphicon-user" style="float: right;"><?php echo $plan_details_array['number_of_people'];?></span></h5>
                             </div>
                             <div class="panel-body" style="padding-bottom: -50px;">
@@ -101,7 +101,7 @@
                                             <?php }?>"><?php if($give_or_take<0){
                                                 echo "Owes ₹ ".(int)abs($give_or_take);
                                             } else if($give_or_take>0){
-                                                echo "Gets back ₹ ".(int)$give_or_take;
+                                                echo "Gets Back ₹ ".(int)$give_or_take;
                                         } else{
                                             echo "₹ 0";
                                         } ?></span>

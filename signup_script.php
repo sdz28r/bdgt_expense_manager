@@ -8,7 +8,7 @@
     $password = mysqli_real_escape_string($con, $_POST['password']);
     $phone_number = mysqli_real_escape_string($con, $_POST['phoneNumber']);
     if(strlen($password) < 6){
-        echo "<script>alert('Minimun 6 digits required'); window.location = 'signup.php'; </script>";
+        echo "<script>alert('Minimun 6 digits required for password'); window.location = 'signup.php'; </script>";
     }
     else if(is_nan($phone_number) || strlen($phone_number) != 10){
         echo "<script>alert('Not a valid phone number'); window.location = 'signup.php'; </script>";

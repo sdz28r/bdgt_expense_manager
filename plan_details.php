@@ -33,11 +33,11 @@
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <strong>From</strong>
-                                            <input type="date" id="datefield" required class="form-control" placeholder="dd/mm/yyyy" name="fromDate" min="">                        
+                                            <input type="date" id="datefield" required class="form-control" placeholder="dd/mm/yyyy" name="fromDate">                        
                                         </div>
                                         <div class="col-xs-6">
                                             <strong>To</strong>
-                                            <input type="date" id="datefield" required class="form-control" placeholder="dd/mm/yyyy" name="toDate" min="">                        
+                                            <input type="date" id="datefield" required class="form-control" placeholder="dd/mm/yyyy" name="toDate" min= fromDate.value>                        
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                                         </div>
                                 <?php } ?> 
                                 <div class="form-group">
-                                    <strong><button type="Submit" class="btn btn-primary form-control">Submit</button></strong>
+                                    <strong><button type="Submit" class="btn btn-primary buttonindex form-control">Submit</button></strong>
                                 </div>
                             </div>
                         </form>

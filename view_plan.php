@@ -83,7 +83,7 @@
                             ?> 
                             <div class="col-xs-12 col-sm-8">
                                 <div class="panel panel-default" style="width:75%">
-                                    <div class="panel-heading" style="background-color: #00C69E; color: white"> 
+                                    <div class="panel-heading" style="background-color: #00796b; color: white"> 
                                         <h4 style="text-align: center;"><?php echo $row_second['title'] ?><span class="glyphicon glyphicon-user" style="float: right;"><?php echo $row_second['number_of_people']; ?></span></h4>
                                     </div>
                                     <div class="panel-body">
@@ -136,8 +136,8 @@
                                             $row_seventh = mysqli_fetch_array($date_submit);?>
                                             <div class="col-sm-6 col-xs-12 col-md-4">
                                                 <div class="panel panel-default">
-                                                    <div class="panel-heading" style="background-color: #00C69E; color: white"> 
-                                                        <h4 style="text-align: center;"><?php echo $arr_rows['title']; ?></h4>
+                                                    <div class="panel-heading" style="background-color: #00796b; color: white"> 
+                                                        <h4 style="text-align: center;"><?php echo $arr_rows['title'] /*substr($arr_rows['title'], 0, 20);*/ ?></h4>
                                                     </div>
                                                     <div class="panel-body">
                                                         <form action="" method="">
@@ -162,7 +162,7 @@
                                                                     <?php if($row_seventh[1] == ""){
                                                                         echo "You Don't have bill";}
                                                                     else{
-                                                                        echo "Show bill";
+                                                                        echo "<a href = \"$row_seventh[1]\" target = _blank style = \"text-decoration: none;\">Show bill</a>";
                                                                     } ?></span>
                                                                 </center>
                                                             </div>
@@ -183,7 +183,7 @@
                                 <div class="row">            
                                     <div class="col-xs-12">
                                         <div class="panel panel-default">
-                                            <div class="panel-heading" style="background-color: #00C69E; color: white;"> 
+                                            <div class="panel-heading" style="background-color: #00796b; color: white;"> 
                                                 <center>
                                                     <h5>Add New Expense</h5>
                                                 </center>
@@ -196,7 +196,11 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <strong>Date</strong><br>
-                                                        <input type="date" required class="form-control" placeholder="" name="dateOfExpense">
+                                                        <input type="date" required class="form-control" placeholder="" name="dateOfExpense" min="<?php 
+                                                            $from_to_date_query = "select from_date, to_date from plan_details where id = '$plan_id'";
+                                                            $from_to_date_query_result = mysqli_query($con, $from_to_date_query);
+                                                            $row_eighth = mysqli_fetch_array($from_to_date_query_result);
+                                                            echo $row_eighth[0]; ?>" max="<?php echo $row_eighth[1]; ?>">
                                                     </div>
                                                     <div class="form-group">
                                                         <strong>Amount Spent</strong><br>
