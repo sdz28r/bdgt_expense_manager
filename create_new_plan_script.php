@@ -15,17 +15,5 @@
     if(isset($_SESSION['id'])){
         header('location: plan_details.php');
         exit ;
-    }
-    
+    } 
 ?>
-
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Create New plan Script</title>
-    </head>
-    <body>
-    </body>
-</html>

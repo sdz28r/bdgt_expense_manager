@@ -46,13 +46,3 @@
         . "window.location = 'change_password.php'; </script>";
     }
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Change Password Script</title>
-    </head>
-    <body>
-    </body>
-</html>

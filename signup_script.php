@@ -43,13 +43,3 @@
         }
     }
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Sign Up Script Page</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-    </body>
-</html>

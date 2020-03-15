@@ -31,13 +31,3 @@
         exit ;
     }
 ?>
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login Script</title>
-    </head>
-    <body>
-    </body>
-</html>

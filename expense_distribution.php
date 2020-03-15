@@ -58,7 +58,11 @@
                                                 $row = mysqli_fetch_array($submit);
                                                 $k = 0;
                                                 $k += $row[0];
-                                                echo "₹ ".(int)$k;?></span>
+                                                if($k-(int)$k == 0){
+                                                    echo "₹ ".(int)$k;
+                                                } else{
+                                                    echo "₹ ".number_format((float)$k, 2, '.', '');
+                                                }?></span>
                                         </div>
                                     <?php } ?>
                                     
@@ -75,7 +79,11 @@
                                             <?php } else if($remaining_amount<0) { ?>
                                                 color: red;
                                             <?php }?>"><?php if($remaining_amount<0){
-                                                echo "Overspent by ₹ ".abs($remaining_amount);
+                                                if($individual_spent-(int)$individual_spent == 0){
+                                                    echo "Overspent by ₹ ".abs($remaining_amount);
+                                                } else{
+                                                    echo "Overspent by ₹ ".number_format((float)$remaining_amount, 2, '.', '');
+                                                }
                                             } else{
                                                 echo "₹ ".(int)$remaining_amount;
                                         } ?></span>
@@ -84,7 +92,12 @@
                                     <div class="form-group form-inline">
                                         <strong>Individual shares</strong>
                                         <span style="float: right;">
-                                            <?php $individual_spent = $amount_spent/$plan_details_array['number_of_people']; echo "₹ ".(int)$individual_spent; ?></span>
+                                            <?php $individual_spent = $amount_spent/$plan_details_array['number_of_people']; 
+                                            if($individual_spent-(int)$individual_spent == 0){
+                                                echo "₹ ".(int)$individual_spent;
+                                            } else{
+                                                echo "₹ ".number_format((float)$individual_spent, 2, '.', '');
+                                            } ?></span>
                                     </div>
                                     
                                     <?php for($i=4;$i<$num_people;$i++){ 
@@ -99,9 +112,17 @@
                                             <?php } else if($give_or_take<0) { ?>
                                                 color: red;
                                             <?php }?>"><?php if($give_or_take<0){
-                                                echo "Owes ₹ ".(int)abs($give_or_take);
+                                                if($give_or_take-(int)$give_or_take == 0){
+                                                    echo "Owes ₹ ".(int)abs($give_or_take);
+                                                } else{
+                                                    echo "Owes ₹ ".number_format(abs((float)$give_or_take), 2, '.', '');
+                                                }
                                             } else if($give_or_take>0){
-                                                echo "Gets Back ₹ ".(int)$give_or_take;
+                                                if($give_or_take-(int)$give_or_take == 0){
+                                                    echo "Gets Back ₹ ".(int)$give_or_take;
+                                                } else{
+                                                    echo "Gets Back ₹ ".number_format((float)$give_or_take, 2, '.', '');
+                                                }
                                         } else{
                                             echo "₹ 0";
                                         } ?></span>
